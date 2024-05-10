@@ -1,0 +1,22 @@
+{
+  "db": "/etc/data/db",
+  "checkpointSyncer": {
+    "type": "localStorage",
+    "path": "/etc/validator/xiontestnet1/checkpoint"
+  },
+  "originChainName": "xiontestnet1",
+  "validator": {
+    "type": "hexKey",
+    "key": "2XwVtXKfYdCShsE3wFdyHgeSagiYr7wcK7tNHa7iZFfV"
+  },
+  "chains": {
+    "xiontestnet1": {
+      "signer": {
+        "type": "cosmosKey",
+        "key": "2XwVtXKfYdCShsE3wFdyHgeSagiYr7wcK7tNHa7iZFfV",
+        "prefix": "xion"
+
+      }
+    }
+  }
+}

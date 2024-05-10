@@ -1,30 +1,42 @@
 {
   "db": "/etc/data/db",
-  "relayChains": "osmotest5,sepolia",
+  "relayChains": "xiontestnet1,sepolia",
   "allowLocalCheckpointSyncers": "true",
-  "gasPaymentEnforcement": [{ "type": "none" }],
+  "gasPaymentEnforcement": [
+    {
+      "type": "none"
+    }
+  ],
   "whitelist": [
     {
-      "origindomain": [11155111],
-      "destinationDomain": [1304]
+      "origindomain": [
+        11155111
+      ],
+      "destinationDomain": [
+        1360
+      ]
     },
     {
-      "origindomain": [1304],
-      "destinationDomain": [11155111]
+      "origindomain": [
+        1360
+      ],
+      "destinationDomain": [
+        11155111
+      ]
     }
   ],
   "chains": {
     "sepolia": {
       "signer": {
         "type": "hexKey",
-        "key": "{sepolia_private_key}"
+        "key": "J8FV9PZpiYh7Yv3hRLVEcuRaF1fwasxKBCpSsRnezmfp"
       }
     },
-    "osmotest5": {
+    "xiontestnet1": {
       "signer": {
         "type": "cosmosKey",
-        "key": "{osmosis_private_key}",
-        "prefix": "osmo"
+        "key": "2XwVtXKfYdCShsE3wFdyHgeSagiYr7wcK7tNHa7iZFfV",
+        "prefix": "xion"
       }
     }
   }

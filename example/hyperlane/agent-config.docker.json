@@ -58,6 +58,40 @@
         "from": 4517401,
         "chunk": 100000
       }
+    },
+    "xiontestnet1": {
+      "name": "xiontestnet1",
+      "domainId": 1360,
+      "chainId": "xion-testnet-1",
+      "protocol": "cosmos",
+      "rpcUrls": [
+        {
+          "http": "http://65.109.112.144:1021"
+        },
+        {
+          "http": "https://testnet-burnt-rpc.lavenderfive.com"
+        }
+      ],
+      "grpcUrl":"http://65.109.112.144:9010",
+      "canonicalAsset": "uxion",
+      "bech32Prefix": "xion",
+      "gasPrice": {
+        "amount": "0.025",
+        "denom": "uxion"
+      },
+      "contractAddressBytes": 32,
+      "index": {
+        "from": 7670784,
+        "chunk": 10000
+      },
+      "blocks": {
+        "confirmations": 0,
+        "reorgPeriod": 0
+      },
+      "mailbox": "0xb0fe67ccd7998c71b397c9722d6bed0030e82a7c0b7520a9b6ea893f970f50a9",
+      "validatorAnnounce": "0x1ac13c422a0575d3f30ba86d3340f255a613125da2fdc9f6b4946a66cca1dbc2",
+      "interchainGasPaymaster": "0x465aa02eaf3d2335bc2d7da36c2afde5f4e8cdc14fc6c17597d286b6694ec189",
+      "merkleTreeHook": "0x8bf59caf1aa07fb6e079eb735245404c76ef6eb473de45c6d63c75ec1d848b7c"
     }
   }
 }

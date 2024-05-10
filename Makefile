@@ -30,7 +30,7 @@ optimize-fast:
 	cargo cw-optimizoor
 	rename --force 's/(.*)-(.*)\.wasm/$$1\.wasm/d' artifacts/*
 
-build: optimize-fast check
+build: optimize check
 	cargo build
 	cargo wasm
 
