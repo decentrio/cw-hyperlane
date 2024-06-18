@@ -1,8 +1,8 @@
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
-    ensure_eq, to_json_binary, wasm_execute, CosmosMsg, Deps, DepsMut, Env, HexBinary, MessageInfo,
-    QueryResponse, Reply, Response, StdError, SubMsg, Uint128, Uint256, WasmMsg,
+    ensure_eq, to_json_binary, wasm_execute, CosmosMsg, Deps, DepsMut, Empty, Env, HexBinary,
+    MessageInfo, QueryResponse, Reply, Response, StdError, SubMsg, Uint128, Uint256, WasmMsg,
 };
 
 use cw20::Cw20ExecuteMsg;
@@ -99,7 +99,18 @@ pub fn execute(
             dest_domain,
             recipient,
             amount,
-        } => transfer_remote(deps, env, info, dest_domain, recipient, amount),
+            hook,
+            metadata,
+        } => transfer_remote(
+            deps,
+            env,
+            info,
+            dest_domain,
+            recipient,
+            amount,
+            hook,
+            metadata,
+        ),
     }
 }
 
@@ -170,6 +181,7 @@ fn mailbox_handle(
     ))
 }
 
+#[allow(clippy::too_many_arguments)]
 fn transfer_remote(
     deps: DepsMut,
     env: Env,
@@ -177,6 +189,8 @@ fn transfer_remote(
     dest_domain: u32,
     recipient: HexBinary,
     transfer_amount: Uint128,
+    hook: Option<String>,
+    metadata: Option<HexBinary>,
 ) -> Result<Response, ContractError> {
     let token = TOKEN.load(deps.storage)?;
     let mode = MODE.load(deps.storage)?;
@@ -185,6 +199,11 @@ fn transfer_remote(
     let dest_router = get_route::<HexBinary>(deps.storage, dest_domain)?
         .route
         .expect("route not found");
+
+    // validate hook if present
+    if let Some(ref custom_hook) = hook {
+        let _ = deps.api.addr_validate(custom_hook)?;
+    }
 
     let mut msgs: Vec<CosmosMsg> = vec![];
 
@@ -218,8 +237,8 @@ fn transfer_remote(
             metadata: HexBinary::default(),
         }
         .into(),
-        get_hook(deps.storage)?.map(|v| v.into()),
-        None,
+        hook.clone().or(get_hook(deps.storage)?.map(|v| v.into())),
+        metadata.clone(),
         info.funds,
     )?);
 
@@ -229,7 +248,9 @@ fn transfer_remote(
             .add_attribute("dest_domain", dest_domain.to_string())
             .add_attribute("recipient", recipient.to_hex())
             .add_attribute("token", token)
-            .add_attribute("amount", transfer_amount),
+            .add_attribute("amount", transfer_amount)
+            .add_attribute("hook", hook.unwrap_or_default())
+            .add_attribute("metadata", metadata.unwrap_or_default().to_string()),
     ))
 }
 
@@ -267,6 +288,12 @@ fn get_token_mode(deps: Deps) -> Result<TokenModeResponse, ContractError> {
     Ok(TokenModeResponse { mode })
 }
 
+#[cfg_attr(not(feature = "library"), entry_point)]
+pub fn migrate(deps: DepsMut, _env: Env, _msg: Empty) -> Result<Response, ContractError> {
+    hpl_utils::migrate(deps.storage, CONTRACT_NAME, CONTRACT_VERSION)?;
+    Ok(Response::default())
+}
+
 #[cfg(test)]
 mod test {
     use cosmwasm_std::{
@@ -292,6 +319,7 @@ mod test {
     const OWNER: &str = "owner";
     const MAILBOX: &str = "mailbox";
     const TOKEN: &str = "token";
+    const CUSTOM_HOOK: &str = "custom_hook";
 
     const CW20_BRIDGED_CODE_ID: u64 = 1;
     const CW20_BRIDGED_NAME: &str = "cw20-created";
@@ -509,15 +537,17 @@ mod test {
     }
 
     #[rstest]
-    #[case(1, gen_bz(32), token_mode_bridged())]
-    #[case(1, gen_bz(32), token_mode_collateral())]
+    #[case(1, gen_bz(32), token_mode_bridged(), Some(CUSTOM_HOOK), None)]
+    #[case(1, gen_bz(32), token_mode_collateral(), None, Some(gen_bz(100)))]
     #[should_panic(expected = "route not found")]
-    #[case(2, gen_bz(32), token_mode_collateral())]
+    #[case(2, gen_bz(32), token_mode_collateral(), None, None)]
     fn test_transfer_remote(
         #[values("osmo", "neutron")] hrp: &str,
         #[case] domain: u32,
         #[case] route: HexBinary,
         #[case] token_mode: Cw20TokenMode,
+        #[case] custom_hook: Option<&str>,
+        #[case] custom_metadata: Option<HexBinary>,
     ) {
         let (mut deps, _) = deps(
             vec![(1, route.clone())],
@@ -536,6 +566,8 @@ mod test {
                 dest_domain: domain,
                 recipient: recipient.clone(),
                 amount: Uint128::new(100),
+                hook: custom_hook.map(|h| h.to_string()),
+                metadata: custom_metadata.clone(),
             },
             vec![],
         );
@@ -558,8 +590,16 @@ mod test {
             metadata: HexBinary::default(),
         };
 
-        let dispatch_msg =
-            mailbox::dispatch(MAILBOX, domain, route, warp_msg.into(), None, None, vec![]).unwrap();
+        let dispatch_msg = mailbox::dispatch(
+            MAILBOX,
+            domain,
+            route,
+            warp_msg.into(),
+            custom_hook.map(|h| h.to_string()),
+            custom_metadata,
+            vec![],
+        )
+        .unwrap();
 
         match token_mode {
             TokenModeMsg::Bridged(_) => {
