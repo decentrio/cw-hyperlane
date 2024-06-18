@@ -27,13 +27,10 @@
       "protocol": "ethereum",
       "rpcUrls": [
         {
-          "http": "https://ethereum-sepolia.blockpi.network/v1/rpc/public"
+          "http": "https://rpc-sepholia.decentrio.ventures"
         },
         {
-          "http": "https://eth-sepolia.g.alchemy.com/v2/demo"
-        },
-        {
-          "http": "https://rpc.sepolia.org"
+          "http": "https://eth-sepolia.g.alchemy.com/v2/jWmA0ERPc0JdyMrZSEiM5lOBpEu2hD2l"
         }
       ],
       "merkleRootMultisigIsmFactory": "0x0a71AcC99967829eE305a285750017C4916Ca269",
@@ -56,27 +53,27 @@
       "pausableHook": "0xa68022e53Fd28119D07C8336a8eC84A298Fd38Fd",
       "index": {
         "from": 4517401,
-        "chunk": 100000
+        "chunk": 2000
       }
     },
     "xiontestnet1": {
       "name": "xiontestnet1",
-      "domainId": 1360,
+      "domainId": "1360",
       "chainId": "xion-testnet-1",
       "protocol": "cosmos",
       "rpcUrls": [
         {
-          "http": "http://65.109.112.144:1021"
+          "http": "https://xion-testnet-rpc.polkachu.com"
         },
         {
-          "http": "https://testnet-burnt-rpc.lavenderfive.com"
+          "http": "https://testnet-xion-rpc.lavenderfive.com"
         }
       ],
-      "grpcUrl":"http://65.109.112.144:9010",
+      "grpcUrl": "https://grpc-xion.decentrio.ventures",
       "canonicalAsset": "uxion",
       "bech32Prefix": "xion",
       "gasPrice": {
-        "amount": "0.025",
+        "amount": "1",
         "denom": "uxion"
       },
       "contractAddressBytes": 32,

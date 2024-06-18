@@ -1,0 +1,13 @@
+{
+    "type": "native",
+    "mode": "collateral",
+  
+    "id": "uxion",
+    "owner": "<signer>",
+    "config": {
+      "collateral": {
+        "denom": "uxion"
+      }
+    }
+  }
+  

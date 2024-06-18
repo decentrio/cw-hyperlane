@@ -225,17 +225,17 @@ yarn cw-hpl-exp warp link $hypErc20Osmo 1037 $OSMOSIS_WARP_ROUTE_ADDRESS --pk 'Y
 # also register sepolia warp route to osmo-test-5 warp route
 yarn cw-hpl warp link \
   --asset-type native \
-  --asset-id uosmo \
+  --asset-id uxion \
   --target-domain 11155111 \
-  --warp-address $hypErc20Osmo \
-  -n osmo-test-5
+  --warp-address 0xdF6AA39C8a4A545A34339E6eE9f3f0fe12d4B680 \
+  -n xion-testnet-1
 
 # test transfer
 yarn cw-hpl warp transfer \
   --asset-type native \
-  --asset-id uosmo \
+  --asset-id uxion \
   --target-domain 11155111 \
-  -n osmo-test-5
+  -n xion-testnet-1
 ```
 
 ## 8. Done 🎉
