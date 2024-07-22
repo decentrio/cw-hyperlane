@@ -158,7 +158,7 @@ And run with below command.
 cd ./example
 
 # Merge osmo-test-5.config.json and agent-config.docker.json
-OSMOSIS_TESTNET_AGENT_CONFIG=$(cat ../context/osmo-test-5.config.json | jq -r '.chains.osmotest5') && \
+OSMOSIS_TESTNET_AGENT_CONFIG=$(cat g../context/osmo-test-5.config.json | jq -r '.chains.osmotest5') && \
   OSMOSIS_TESTNET_AGENT_CONFIG_NAME=$(echo $OSMOSIS_TESTNET_AGENT_CONFIG | jq -r '.name') && \
     cat ./hyperlane/agent-config.docker.json \
       | jq ".chains.$OSMOSIS_TESTNET_AGENT_CONFIG_NAME=$(echo $OSMOSIS_TESTNET_AGENT_CONFIG)" > merge.tmp && \
@@ -215,7 +215,9 @@ yarn cw-hpl-exp warp deploy --pk 'YOUR_PRIVATE_KEY'
 
 # then output will like this
 { "hypErc20Osmo": "0x..." }
-
+{ hypErc20: '0xD30dcA5e814391877BBa47FeeceC5A8C37743E05' }
+0xD30dcA5e814391877BBa47FeeceC5A8C37743E05
+xion1ec39whnyu30tqrs0jsdgx8w29paz3qsmsnytzc2u84kgk8d5l0ns8mudpf
 # deploy warp route on osmo-test-5
 yarn cw-hpl warp create ./example/warp/uosmo.json -n osmo-test-5
 
@@ -227,7 +229,7 @@ yarn cw-hpl warp link \
   --asset-type native \
   --asset-id uxion \
   --target-domain 11155111 \
-  --warp-address 0xdF6AA39C8a4A545A34339E6eE9f3f0fe12d4B680 \
+  --warp-address 0xD30dcA5e814391877BBa47FeeceC5A8C37743E05 \
   -n xion-testnet-1
 
 # test transfer
@@ -235,6 +237,7 @@ yarn cw-hpl warp transfer \
   --asset-type native \
   --asset-id uxion \
   --target-domain 11155111 \
+  --amount 1000 \
   -n xion-testnet-1
 ```
 

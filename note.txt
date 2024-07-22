@@ -68,3 +68,78 @@ Caused by:
  Location:
      /usr/src/hyperlane-base/src/contract_sync/cursor.rs:396:31', /usr/src/hyperlane-base/src/contract_sync/mod.rs:160:14
  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+  2024-07-01T14:12:03.734024Z  WARN hyperlane_base::metrics::agent_metrics: Metric update failed for wallet relayer (xion13kggy0ws226lst2kvgns6qgjjd8jk8aqqwf5aj) on chain xiontestnet1 balance for native currency; status: Unknown, message: "transport error", details: [], metadata: MetadataMap { headers: {} }
+at hyperlane-base/src/metrics/agent_metrics.rs:107
+2024-07-01T14:12:05.527833Z ERROR hyperlane_cosmos::mailbox: error: status: Unknown, message: "transport error", details: [], metadata: MetadataMap { headers: {} }
+at chains/hyperlane-cosmos/src/mailbox.rs:240
+in hyperlane_base::contract_sync::ContractSync with label: "dispatched_messages", domain: "xiontestnet1"
+
+
+    owner: "0xC528714699D4f305f1157DD19Dee55D045Beb4C3"
+    defaultIsm:
+      type: trustedRelayerIsm
+      relayer: "0xC528714699D4f305f1157DD19Dee55D045Beb4C3"
+    defaultHook:
+      type: merkleTreeHook
+    requiredHook:
+      owner: "0xC528714699D4f305f1157DD19Dee55D045Beb4C3"
+      type: protocolFee
+      beneficiary: "0xC528714699D4f305f1157DD19Dee55D045Beb4C3"
+      maxProtocolFee: "100000000000000000"
+      protocolFee: "0"
+
+0x6A9c5281d8cc4408B89848d575A7f3F0C2FfE143
+
+    staticMerkleRootMultisigIsmFactory: "0xb63e8103d33Ad2F9eA3bF874Ff733f684A7d200F"
+    staticMessageIdMultisigIsmFactory: "0x81F24a11a3BDB3758693Ee979474F02052836155"
+    staticAggregationIsmFactory: "0xe0b50e73D09DB8c5bF3C791B6aB0Ef0B219e59f3"
+    staticAggregationHookFactory: "0x114bf5413c25E50DE960A5554F3695F105360AE9"
+    domainRoutingIsmFactory: "0xBE294102DB34247dfF6D8cC09505fabbAF71Bd0b"
+    proxyAdmin: "0x1c03c5d8e16a383beCC9Fa20232d4E7B1af2d7f5"
+    mailbox: "0xA58E23750730327d72d5188Be4123C3f834AE08f"
+    interchainAccountRouter: "0xa3F02c0180d9B915F00894a5aF61547fB419aF97"
+    interchainAccountIsm: "0xd5Cb9A256AED6c3353030907c9c2DA88adF71DA3"
+    validatorAnnounce: "0x52a88a74b86267695Cd51E76D511D28e118fCbdA"
+    testRecipient: "0x7962546C5D2524DC6937645F0D532C682f316DC6"
+
+Deploying to sepolia from https://sepolia.etherscan.io/address/0xC528714699D4f305f1157DD19Dee55D045Beb4C3
+Deploy staticMerkleRootMultisigIsmFactory on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0xa98a2e42de65578fddde57d604077804c2b81d20adbf36cdbce6f76581a71126 (waiting 1 blocks for confirmation)
+Deploy staticMessageIdMultisigIsmFactory on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0x9e4a11d409e661aa5b791ec94394a90fa237566c7850865b6693da30228cf563 (waiting 1 blocks for confirmation)
+Deploy staticAggregationIsmFactory on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0x82d79c4e55d47348fd63e72d7043425180aeb9bae3ab07980f7113dc50ed026c (waiting 1 blocks for confirmation)
+Deploy staticAggregationHookFactory on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0x18d17622b39ff4be5738ee81f6222857e50e510e44dea52ce436f46293dd9023 (waiting 1 blocks for confirmation)
+Deploy domainRoutingIsmFactory on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0x458d77373a5ef2931677ce65847f2c82f8a8340a082760f6a7a44ff1b25c4d02 (waiting 1 blocks for confirmation)
+Successfully deployed contracts on sepolia
+Deploy proxyAdmin on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0xe6b0b9c837bc6570858cd9be6fd0ffad00a1bbba0bfe4323fe96309b69ec821d (waiting 1 blocks for confirmation)
+Deploy mailbox on sepolia with constructor args (11155111)
+Pending https://sepolia.etherscan.io/tx/0x2c9e74c058e2152cb0b8f3751d58a139e1f2acf9fdaa02949819225af132c905 (waiting 1 blocks for confirmation)
+Deploy TransparentUpgradeableProxy on sepolia with constructor args (0x6A9c5281d8cc4408B89848d575A7f3F0C2FfE143, 0x1c03c5d8e16a383beCC9Fa20232d4E7B1af2d7f5, 0x)
+Pending https://sepolia.etherscan.io/tx/0x77ecb8a017a31abb7172aa26b76530747451a133c088c86bdfed4df34f2d969c (waiting 1 blocks for confirmation)
+Deploy trustedRelayerIsm on sepolia with constructor args (0xA58E23750730327d72d5188Be4123C3f834AE08f, 0xC528714699D4f305f1157DD19Dee55D045Beb4C3)
+Pending https://sepolia.etherscan.io/tx/0x17a72179fa14715d299a694010a46ef9717b0efc3840bd5f6915e232535f4a37 (waiting 1 blocks for confirmation)
+Deploy merkleTreeHook on sepolia with constructor args (0xA58E23750730327d72d5188Be4123C3f834AE08f)
+Pending https://sepolia.etherscan.io/tx/0x7abe11d7c5b95fc2ca8a4eaf5e28a3d573de8356447f26e8f5116107317dcddc (waiting 1 blocks for confirmation)
+Deploy protocolFee on sepolia with constructor args (100000000000000000, 0, 0xC528714699D4f305f1157DD19Dee55D045Beb4C3, 0xC528714699D4f305f1157DD19Dee55D045Beb4C3)
+Pending https://sepolia.etherscan.io/tx/0xc9afab46c3793c7f6665d32441196538ee1c22d72354c7e770051a96af60bbee (waiting 1 blocks for confirmation)
+Pending https://sepolia.etherscan.io/tx/0xde7208f4c87f127db22a7a0c71c345dc04b97f188b55c48ab2a8e43f2640a81d (waiting 1 blocks for confirmation)
+Deploy interchainAccountIsm on sepolia with constructor args (0xA58E23750730327d72d5188Be4123C3f834AE08f)
+Pending https://sepolia.etherscan.io/tx/0xa4db1686108e648fd802955ad1dde889fe03c2fa24344969b7df8f8ee9d215ed (waiting 1 blocks for confirmation)
+Deploy proxyAdmin on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0xaf8d39912c0663dd632bd391c68e85b4f9da864e4d109b0f5c58c6a894b22f4f (waiting 1 blocks for confirmation)
+Deploy interchainAccountRouter on sepolia with constructor args (0xA58E23750730327d72d5188Be4123C3f834AE08f)
+Pending https://sepolia.etherscan.io/tx/0x7c2a3bbb93e370134f0bd5f285f22bc972d49ad9ce9b22ca87fe5f3d6aaa6caf (waiting 1 blocks for confirmation)
+Pending https://sepolia.etherscan.io/tx/0x555ff1982da6058fc25834bd28afcb49281b858cdabb42d12b569a539ad88f14 (waiting 1 blocks for confirmation)
+Deploy TransparentUpgradeableProxy on sepolia with constructor args (0x26b18779eDbBbAc15e40500864957350b0E90B1d, 0xAFc8B92BFB3D011434A2DdA822B79AF699C84542, 0xc0c53b8b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d5cb9a256aed6c3353030907c9c2da88adf71da3000000000000000000000000c528714699d4f305f1157dd19dee55d045beb4c3)
+Pending https://sepolia.etherscan.io/tx/0x1074d3e0dc8dfe615b2f98c891ca63d8c9c9cb58e63c579cebf31a420bb121c9 (waiting 1 blocks for confirmation)
+Deploy validatorAnnounce on sepolia with constructor args (0xA58E23750730327d72d5188Be4123C3f834AE08f)
+Pending https://sepolia.etherscan.io/tx/0x1003a4a6aa8f92206bf78bf65104299d21af9a764c104b74057fa9753403b6ac (waiting 1 blocks for confirmation)
+Deploy testRecipient on sepolia with constructor args ()
+Pending https://sepolia.etherscan.io/tx/0xd66178fd3884968a915e2a8ea05d68503610f26770c89b52ee8250862e2b56a0 (waiting 1 blocks for confirmation)
+Sent tx 0x259b6bb5e6da59a79bbfce0e2ba3775a8a858b5970c8e0570433f13366bb1213
+Pending https://sepolia.etherscan.io/tx/0x259b6bb5e6da59a79bbfce0e2ba3775a8a858b5970c8e0570433f13366bb1213 (waiting 1 blocks for confirmation)

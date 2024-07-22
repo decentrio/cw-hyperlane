@@ -1,109 +1,102 @@
 {
   "artifacts": {
-    "hpl_mailbox": 717,
-    "hpl_validator_announce": 718,
-    "hpl_ism_aggregate": 719,
-    "hpl_ism_multisig": 720,
-    "hpl_ism_pausable": 721,
-    "hpl_ism_routing": 722,
-    "hpl_igp": 723,
-    "hpl_hook_aggregate": 724,
-    "hpl_hook_fee": 725,
-    "hpl_hook_merkle": 726,
-    "hpl_hook_pausable": 727,
-    "hpl_hook_routing": 728,
-    "hpl_hook_routing_custom": 729,
-    "hpl_hook_routing_fallback": 730,
-    "hpl_test_mock_hook": 731,
-    "hpl_test_mock_ism": 732,
-    "hpl_test_mock_msg_receiver": 733,
-    "hpl_igp_oracle": 734,
-    "hpl_warp_cw20": 735,
-    "hpl_warp_native": 736
+    "hpl_mailbox": 931,
+    "hpl_validator_announce": 932,
+    "hpl_ism_aggregate": 933,
+    "hpl_ism_multisig": 934,
+    "hpl_ism_pausable": 935,
+    "hpl_ism_routing": 936,
+    "hpl_igp": 937,
+    "hpl_hook_aggregate": 938,
+    "hpl_hook_fee": 939,
+    "hpl_hook_merkle": 940,
+    "hpl_hook_pausable": 941,
+    "hpl_hook_routing": 942,
+    "hpl_hook_routing_custom": 943,
+    "hpl_hook_routing_fallback": 944,
+    "hpl_test_mock_hook": 945,
+    "hpl_test_mock_ism": 946,
+    "hpl_test_mock_msg_receiver": 947,
+    "hpl_igp_oracle": 948,
+    "hpl_warp_cw20": 949,
+    "hpl_warp_native": 950
   },
   "deployments": {
     "core": {
       "mailbox": {
         "type": "hpl_mailbox",
-        "address": "xion1c0jv6ra246hug8txl92aqucyv8qdhnjvk29nhd6sun2ftjfufhlq65x5jk",
-        "hexed": "0xc3e4cd0faaaeafc41d66f955d0730461c0dbce4cb28b3bb750e4d495c93c4dfe"
+        "address": "xion19gwqp3s27gy3d089ftx68e9tdk8m68xe9yv7mx3nt9tdeq9fhyfsl0q3ng",
+        "hexed": "0x2a1c00c60af20916bce54acda3e4ab6d8fbd1cd92919ed9a335956dc80a9b913"
       },
       "validator_announce": {
         "type": "hpl_validator_announce",
-        "address": "xion122p2hamkef92sx64vugxwjakpsmetpc9dml2gmax0qstz2n06pdsg6d6jg",
-        "hexed": "0x5282abf776ca4aa81b556710674bb60c379587056efea46fa67820b12a6fd05b"
+        "address": "xion17j28jkffhj8qgtqf5ghzrckwcxjefad0j08vw4zvgc5z8sm5ljcqg6yj3y",
+        "hexed": "0xf494795929bc8e042c09a22e21e2cec1a594f5af93cec7544c462823c374fcb0"
       }
     },
     "isms": {
       "type": "hpl_ism_routing",
-      "address": "xion1sx57nggtx4223n0vxe9w7q730jkhfsmcdfjryeakah5u0yzcgs4qkhnqdl",
-      "hexed": "0x81a9e9a10b3554a8cdec364aef03d17cad74c3786a643267b6ede9c79058442a",
+      "address": "xion15nkdqx84quft0kuxjjtm3xk7ywn5z3cg5hj9dzjs8w6galfu2u0qwxghg4",
+      "hexed": "0xa4ecd018f50712b7db869497b89ade23a7414708a5e4568a503bb48efd3c571e",
       "isms": {
         "domain": 0,
         "route": {
           "type": "hpl_ism_multisig",
-          "address": "xion1wqdgt4qeuph0kq45yuewq3ywyr7fu3t9qnhu7xdume5q2gv4waqq2m3csh",
-          "hexed": "0x701a85d419e06efb02b42732e0448e20fc9e456504efcf19bcde680521957740"
+          "address": "xion1zkv48t7ea3xhre23u262m4kq9f48qynr4cadjgadahzvaahkexssun3kzz",
+          "hexed": "0x159953afd9ec4d71e551e2b4add6c02a6a701263ae3ad923adedc4cef6f6c9a1"
         }
       }
     },
     "hooks": {
       "default": {
         "type": "hpl_hook_aggregate",
-        "address": "xion1s5r3tujl6q44yxj65zzc0jn9tgr8qjl80ttc6ntggwdwapwwh8hqm2km8s",
-        "hexed": "0x850715f25fd02b521a5aa08587ca655a06704be77ad78d4d68439aee85ceb9ee",
+        "address": "xion1nyjemyy70lq5q7ntufk6dwe7wzg02q8gp39qhrzc7y2zmmuqrchqef8vp9",
+        "hexed": "0x99259d909e7fc1407a6be26da6bb3e7090f500e80c4a0b8c58f1142def801e2e",
         "hooks": [
           {
             "type": "hpl_hook_merkle",
-            "address": "xion1s9s3jeqlxa22wrmsv20lu9mr2hcu74jr4a5qg5g77a46pexc9t5qnlz6wj",
-            "hexed": "0x816119641f3754a70f70629ffe176355f1cf5643af6804511ef76ba0e4d82ae8"
+            "address": "xion13j7lqz3s2ex37gegmdqz2mrhl00wdzd8uxdzg9nl4tlhqtl3slzqhq0a3n",
+            "hexed": "0x8cbdf00a30564d1f2328db40256c77fbdee689a7e19a24167faaff702ff187c4"
           },
           {
             "type": "hpl_igp",
-            "address": "xion136gkwk5np8vg90pzpt3fx2kdl2sfelf3q3j3xt27ehxtcsn5sh7qlsyrlm",
-            "hexed": "0x8e91675a9309d882bc220ae2932acdfaa09cfd310465132d5ecdccbc427485fc",
+            "address": "xion1lgkjr08tg34hxxa66u34gw2r45mlc9v958zxw8nlnrlwffn63ufs4rsx80",
+            "hexed": "0xfa2d21bceb446b731bbad723543943ad37fc1585a1c4671e7f98fee4a67a8f13",
             "oracle": {
               "type": "hpl_igp_oracle",
-              "address": "xion1uac7hqxj35wxunhjx8mhg3dnu3w8m5ntqm6gya2z882qfmhrryysmjccmr",
-              "hexed": "0xe771eb80d28d1c6e4ef231f77445b3e45c7dd26b06f482754239d404eee31909"
+              "address": "xion1d85htxe45ct258qmywe0kmq2a0v70cg5m5h70etzfsxg7vu2uvaq65yau8",
+              "hexed": "0x69e9759b35a616aa1c1b23b2fb6c0aebd9e7e114dd2fe7e5624c0c8f338ae33a"
             }
           }
         ]
       },
       "required": {
         "type": "hpl_hook_aggregate",
-        "address": "xion10mp4p3f63zn980h3yfq5kenqj0nnzwsaa9v64wesmh9nmg746uysv9u0kp",
-        "hexed": "0x7ec350c53a88a653bef122414b666093e7313a1de959aabb30ddcb3da3d5d709",
+        "address": "xion1daw27mv0c24nnaehs44yv4n3zdlcmxkehts2l4v64crt0s4egcysfdwpa0",
+        "hexed": "0x6f5caf6d8fc2ab39f737856a465671137f8d9ad9bae0afd59aae06b7c2b94609",
         "hooks": [
           {
             "type": "hpl_hook_pausable",
-            "address": "xion1d7zkt4pa4d09x4wpd0zw4fme4qk8kf5alpkt83ktfqtx5dl5ln9q0pavqg",
-            "hexed": "0x6f8565d43dab5e5355c16bc4eaa779a82c7b269df86cb3c6cb48166a37f4fcca"
+            "address": "xion1aj26vpfqwsm4hjkn9klrll0zr36ljppxjf68gdmg4w67nt38nwrqlxvw4q",
+            "hexed": "0xec95a6052074375bcad32dbe3ffde21c75f904269274743768abb5e9ae279b86"
           },
           {
             "type": "hpl_hook_fee",
-            "address": "xion1amads9c8ng73mqdqzskqyu6h78lzzf84muprlwars8hkdplk5yxq3kskjr",
-            "hexed": "0xeefad817079a3d1d81a0142c027357f1fe2124f5df023fbba381ef6687f6a10c"
+            "address": "xion13gr05jzyss9k42zrpyrfhfrqvfrj7m9gslmt7ku5gtt03yrr4rss7h9ses",
+            "hexed": "0x8a06fa4844840b6aa84309069ba46062472f6ca887f6bf5b9442d6f89063a8e1"
           }
         ]
       }
     },
     "warp": {
-      "native": [
-        {
-          "id": "uxion",
-          "type": "hpl_warp_native",
-          "address": "xion1q8f5ek03yys4uk07p9wq5ztyzf3757uw7d74hdl0440xth4ezzkqv8c6jl",
-          "hexed": "0x01d34cd9f121215e59fe095c0a09641263ea7b8ef37d5bb7efad5e65deb910ac"
-        }
-      ],
+      "native": [],
       "cw20": []
     },
     "test": {
       "msg_receiver": {
         "type": "hpl_test_mock_msg_receiver",
-        "address": "xion1dssml0g2s0fa2n8vwfezp9hgx3rwyd23f66uep9x7z9z4tsm6qyq5up8ym",
-        "hexed": "0x6c21bfbd0a83d3d54cec72722096e83446e235514eb5cc84a6f08a2aae1bd008"
+        "address": "xion1j5ffxnsmskyne2qggpuwup9t76h5q773ety6m3ys7nvsv06ndr5sgt3kah",
+        "hexed": "0x9512934e1b85893ca8084078ee04abf6af407bd1cac9adc490f4d9063f5368e9"
       }
     }
   }
