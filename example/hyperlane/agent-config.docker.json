@@ -49,7 +49,7 @@
       "testRecipient": "0xeDc1A3EDf87187085A3ABb7A9a65E1e7aE370C07",
       "testTokenRecipient": "0x031AD9c560D37baC7d6Bd2d27A2443bAfd10101A",
       "routingIsmFactory": "0x3F100cBBE5FD5466BdB4B3a15Ac226957e7965Ad",
-      "interchainSecurityModule": "0x958124472b14B7940Ed5317C44a2508791dB1d48",
+      "interchainSecurityModule": "0x24463f16f2b3c53265d427fe66bdbc0e0de2027b",
       "pausableHook": "0xa68022e53Fd28119D07C8336a8eC84A298Fd38Fd",
       "index": {
         "from": 4517401,
@@ -63,13 +63,13 @@
       "protocol": "cosmos",
       "rpcUrls": [
         {
-          "http": "https://xion-testnet-rpc.polkachu.com"
+          "http": "https://testnet-xion-rpc.lavenderfive.com"
         },
         {
-          "http": "https://testnet-xion-rpc.lavenderfive.com"
+          "http": "https://xion-testnet-rpc.polkachu.com"
         }
       ],
-      "grpcUrl": "https://grpc-xion.decentrio.ventures",
+      "grpcUrl": "https://grpc-xion.decentrio.ventures:443",
       "canonicalAsset": "uxion",
       "bech32Prefix": "xion",
       "gasPrice": {
@@ -78,17 +78,17 @@
       },
       "contractAddressBytes": 32,
       "index": {
-        "from": 7670784,
+        "from": 8971092,
         "chunk": 10000
       },
       "blocks": {
-        "confirmations": 0,
-        "reorgPeriod": 0
+        "confirmations": 1,
+        "reorgPeriod": 2
       },
-      "mailbox": "0xb0fe67ccd7998c71b397c9722d6bed0030e82a7c0b7520a9b6ea893f970f50a9",
-      "validatorAnnounce": "0x1ac13c422a0575d3f30ba86d3340f255a613125da2fdc9f6b4946a66cca1dbc2",
-      "interchainGasPaymaster": "0x465aa02eaf3d2335bc2d7da36c2afde5f4e8cdc14fc6c17597d286b6694ec189",
-      "merkleTreeHook": "0x8bf59caf1aa07fb6e079eb735245404c76ef6eb473de45c6d63c75ec1d848b7c"
+      "mailbox": "0x2a1c00c60af20916bce54acda3e4ab6d8fbd1cd92919ed9a335956dc80a9b913",
+      "validatorAnnounce": "0xf494795929bc8e042c09a22e21e2cec1a594f5af93cec7544c462823c374fcb0",
+      "interchainGasPaymaster": "0xfa2d21bceb446b731bbad723543943ad37fc1585a1c4671e7f98fee4a67a8f13",
+      "merkleTreeHook": "0x8cbdf00a30564d1f2328db40256c77fbdee689a7e19a24167faaff702ff187c4"
     }
   }
 }
