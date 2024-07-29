@@ -58,18 +58,15 @@
     },
     "xiontestnet1": {
       "name": "xiontestnet1",
-      "domainId": "1360",
+      "domainId": 1360,
       "chainId": "xion-testnet-1",
       "protocol": "cosmos",
       "rpcUrls": [
         {
-          "http": "https://testnet-xion-rpc.lavenderfive.com"
-        },
-        {
           "http": "https://xion-testnet-rpc.polkachu.com"
         }
       ],
-      "grpcUrl": "https://grpc-xion.decentrio.ventures:443",
+      "grpcUrl": "https://xion-testnet.grpc.decentrio.ventures",
       "canonicalAsset": "uxion",
       "bech32Prefix": "xion",
       "gasPrice": {
