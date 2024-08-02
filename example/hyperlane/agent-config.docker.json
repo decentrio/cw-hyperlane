@@ -70,7 +70,7 @@
       "canonicalAsset": "uxion",
       "bech32Prefix": "xion",
       "gasPrice": {
-        "amount": "1",
+        "amount": "10",
         "denom": "uxion"
       },
       "contractAddressBytes": 32,
