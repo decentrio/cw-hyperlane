@@ -143,3 +143,14 @@ Deploy testRecipient on sepolia with constructor args ()
 Pending https://sepolia.etherscan.io/tx/0xd66178fd3884968a915e2a8ea05d68503610f26770c89b52ee8250862e2b56a0 (waiting 1 blocks for confirmation)
 Sent tx 0x259b6bb5e6da59a79bbfce0e2ba3775a8a858b5970c8e0570433f13366bb1213
 Pending https://sepolia.etherscan.io/tx/0x259b6bb5e6da59a79bbfce0e2ba3775a8a858b5970c8e0570433f13366bb1213 (waiting 1 blocks for confirmation)
+
+{
+  testRecipient: '0x236CF0dc44F036fB2Cdd0eF627311E0e5f12ccf7',
+  multisigIsm: '0x4b2b0C02876f64921b7c09e992B257DA0a3810DD'
+}
+
+=> Linking warp route with external chain 1360
+ => tx hash: "0xc8ce15524ed63f07c94e93f066e47692baa6be68f8e572505198a47c9da57277". Waiting for confirmation...
+
+  INFO] [contract] executed hpl_warp_native's router
+B77B8CB63617877AEEC643C44AB8D29D773839095BC485D3FD61E23C16CED6E5

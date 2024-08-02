@@ -89,7 +89,14 @@
       }
     },
     "warp": {
-      "native": [],
+      "native": [
+        {
+          "id": "uxion",
+          "type": "hpl_warp_native",
+          "address": "xion1pqgjc6ec3xhaaepe20szzg0wvwhdu9w44zqc3cnd0s6ky2tajtfqhcn798",
+          "hexed": "0x08112c6b3889afdee43953e02121ee63aede15d5a88188e26d7c3562297d92d2"
+        }
+      ],
       "cw20": []
     },
     "test": {
