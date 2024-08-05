@@ -49,7 +49,7 @@
       "testRecipient": "0xeDc1A3EDf87187085A3ABb7A9a65E1e7aE370C07",
       "testTokenRecipient": "0x031AD9c560D37baC7d6Bd2d27A2443bAfd10101A",
       "routingIsmFactory": "0x3F100cBBE5FD5466BdB4B3a15Ac226957e7965Ad",
-      "interchainSecurityModule": "0x24463f16f2b3c53265d427fe66bdbc0e0de2027b",
+      "interchainSecurityModule": "0x7396f3F19d8Ca7904E370Ead8B3cdFfaB3d444B3",
       "pausableHook": "0xa68022e53Fd28119D07C8336a8eC84A298Fd38Fd",
       "index": {
         "from": 4517401,
@@ -70,22 +70,22 @@
       "canonicalAsset": "uxion",
       "bech32Prefix": "xion",
       "gasPrice": {
-        "amount": "10",
+        "amount": "1",
         "denom": "uxion"
       },
       "contractAddressBytes": 32,
       "index": {
-        "from": 8971092,
+        "from": 9188496,
         "chunk": 10000
       },
       "blocks": {
-        "confirmations": 1,
-        "reorgPeriod": 2
+        "confirmations": 0,
+        "reorgPeriod": 0
       },
-      "mailbox": "0x2a1c00c60af20916bce54acda3e4ab6d8fbd1cd92919ed9a335956dc80a9b913",
-      "validatorAnnounce": "0xf494795929bc8e042c09a22e21e2cec1a594f5af93cec7544c462823c374fcb0",
-      "interchainGasPaymaster": "0xfa2d21bceb446b731bbad723543943ad37fc1585a1c4671e7f98fee4a67a8f13",
-      "merkleTreeHook": "0x8cbdf00a30564d1f2328db40256c77fbdee689a7e19a24167faaff702ff187c4"
+      "mailbox": "0x013f528b01cd9edd45a9f3334bde99e932eea0cb269041f40905f329f401257a",
+      "validatorAnnounce": "0xd43af0574a6a202cbc0cf7a1f5b0f74a8d73f3408c6b648d09f8fd78de4b09ec",
+      "interchainGasPaymaster": "0x6425f1171c9526c79de3f48bfd33cfcb4b4af341ba82d880496c8643022f1e14",
+      "merkleTreeHook": "0xc31a1305df4208be6da5236cc0785123c21f51dd93db4d7f86895bb02f036f06"
     }
   }
 }
