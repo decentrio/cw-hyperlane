@@ -215,9 +215,9 @@ yarn cw-hpl-exp warp deploy --pk 'YOUR_PRIVATE_KEY'
 
 # then output will like this
 { "hypErc20Osmo": "0x..." }
-{ hypErc20: '0xe37BfA5Ecc1Ba894Be8E5BAF84F65fcad1080282' }
-0xe37BfA5Ecc1Ba894Be8E5BAF84F65fcad1080282
-xion1pqgjc6ec3xhaaepe20szzg0wvwhdu9w44zqc3cnd0s6ky2tajtfqhcn798
+{ hypErc20: '0x6844329E73076B52d085Fbf186cCEA2e2E2061F7' }
+0x6844329E73076B52d085Fbf186cCEA2e2E2061F7
+xion13fkxad69zppyjrgkwdhanlcepx2z98h7s68qzg7274rxjykd53qq6rdj20
 # deploy warp route on osmo-test-5
 yarn cw-hpl warp create ./example/warp/uosmo.json -n osmo-test-5
 
@@ -229,7 +229,7 @@ yarn cw-hpl warp link \
   --asset-type native \
   --asset-id uxion \
   --target-domain 11155111 \
-  --warp-address 0xe37BfA5Ecc1Ba894Be8E5BAF84F65fcad1080282 \
+  --warp-address 0x6844329E73076B52d085Fbf186cCEA2e2E2061F7 \
   -n xion-testnet-1
 
 # test transfer

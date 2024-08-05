@@ -25,65 +25,65 @@
     "core": {
       "mailbox": {
         "type": "hpl_mailbox",
-        "address": "xion19gwqp3s27gy3d089ftx68e9tdk8m68xe9yv7mx3nt9tdeq9fhyfsl0q3ng",
-        "hexed": "0x2a1c00c60af20916bce54acda3e4ab6d8fbd1cd92919ed9a335956dc80a9b913"
+        "address": "xion1qyl49zcpek0d63df7ve5hh5eayewagxty6gyraqfqhejnaqpy4aqch5c9v",
+        "hexed": "0x013f528b01cd9edd45a9f3334bde99e932eea0cb269041f40905f329f401257a"
       },
       "validator_announce": {
         "type": "hpl_validator_announce",
-        "address": "xion17j28jkffhj8qgtqf5ghzrckwcxjefad0j08vw4zvgc5z8sm5ljcqg6yj3y",
-        "hexed": "0xf494795929bc8e042c09a22e21e2cec1a594f5af93cec7544c462823c374fcb0"
+        "address": "xion16sa0q462dgsze0qv77sltv8hf2xh8u6q334kfrgflr7h3hjtp8kqdgs504",
+        "hexed": "0xd43af0574a6a202cbc0cf7a1f5b0f74a8d73f3408c6b648d09f8fd78de4b09ec"
       }
     },
     "isms": {
       "type": "hpl_ism_routing",
-      "address": "xion15nkdqx84quft0kuxjjtm3xk7ywn5z3cg5hj9dzjs8w6galfu2u0qwxghg4",
-      "hexed": "0xa4ecd018f50712b7db869497b89ade23a7414708a5e4568a503bb48efd3c571e",
+      "address": "xion13g5zaud7n3x7j5kdn7fh8a09vr5slvljcrpfmpkgew2g4ss9frhs337kp0",
+      "hexed": "0x8a282ef1be9c4de952cd9f9373f5e560e90fb3f2c0c29d86c8cb948ac20548ef",
       "isms": {
         "domain": 0,
         "route": {
           "type": "hpl_ism_multisig",
-          "address": "xion1zkv48t7ea3xhre23u262m4kq9f48qynr4cadjgadahzvaahkexssun3kzz",
-          "hexed": "0x159953afd9ec4d71e551e2b4add6c02a6a701263ae3ad923adedc4cef6f6c9a1"
+          "address": "xion13tkznh84dap0r42wgee7j025te9885k37lcy5anpcr8u4xckvj0ss58z8v",
+          "hexed": "0x8aec29dcf56f42f1d54e4673e93d545e4a73d2d1f7f04a7661c0cfca9b16649f"
         }
       }
     },
     "hooks": {
       "default": {
         "type": "hpl_hook_aggregate",
-        "address": "xion1nyjemyy70lq5q7ntufk6dwe7wzg02q8gp39qhrzc7y2zmmuqrchqef8vp9",
-        "hexed": "0x99259d909e7fc1407a6be26da6bb3e7090f500e80c4a0b8c58f1142def801e2e",
+        "address": "xion1qdd5q88jtukex2sx8wxkj5lrjp64zel9ph3klmm49xq8gly96h6svcnwph",
+        "hexed": "0x035b401cf25f2d932a063b8d6953e390755167e50de36fef752980747c85d5f5",
         "hooks": [
           {
             "type": "hpl_hook_merkle",
-            "address": "xion13j7lqz3s2ex37gegmdqz2mrhl00wdzd8uxdzg9nl4tlhqtl3slzqhq0a3n",
-            "hexed": "0x8cbdf00a30564d1f2328db40256c77fbdee689a7e19a24167faaff702ff187c4"
+            "address": "xion1cvdpxpwlggytumd9ydkvq7z3y0pp75waj0d56lux39dmqtcrdurqwlpp0y",
+            "hexed": "0xc31a1305df4208be6da5236cc0785123c21f51dd93db4d7f86895bb02f036f06"
           },
           {
             "type": "hpl_igp",
-            "address": "xion1lgkjr08tg34hxxa66u34gw2r45mlc9v958zxw8nlnrlwffn63ufs4rsx80",
-            "hexed": "0xfa2d21bceb446b731bbad723543943ad37fc1585a1c4671e7f98fee4a67a8f13",
+            "address": "xion1vsjlz9cuj5nv080r7j9l6v70ed954u6ph2pd3qzfdjryxq30rc2qzvwp78",
+            "hexed": "0x6425f1171c9526c79de3f48bfd33cfcb4b4af341ba82d880496c8643022f1e14",
             "oracle": {
               "type": "hpl_igp_oracle",
-              "address": "xion1d85htxe45ct258qmywe0kmq2a0v70cg5m5h70etzfsxg7vu2uvaq65yau8",
-              "hexed": "0x69e9759b35a616aa1c1b23b2fb6c0aebd9e7e114dd2fe7e5624c0c8f338ae33a"
+              "address": "xion1jedxywveuyl57q3patlu2p3unztpklkmewxg5gw85k5s92z4eessd63gcn",
+              "hexed": "0x965a623999e13f4f0221eaffc5063c98961b7edbcb8c8a21c7a5a902a855ce61"
             }
           }
         ]
       },
       "required": {
         "type": "hpl_hook_aggregate",
-        "address": "xion1daw27mv0c24nnaehs44yv4n3zdlcmxkehts2l4v64crt0s4egcysfdwpa0",
-        "hexed": "0x6f5caf6d8fc2ab39f737856a465671137f8d9ad9bae0afd59aae06b7c2b94609",
+        "address": "xion1z76jh9ujkztnta03r2j9ufndm8tlhsaqvr2da70rg9e00wc5a29sc0uz2h",
+        "hexed": "0x17b52b9792b09735f5f11aa45e266dd9d7fbc3a060d4def9e34172f7bb14ea8b",
         "hooks": [
           {
             "type": "hpl_hook_pausable",
-            "address": "xion1aj26vpfqwsm4hjkn9klrll0zr36ljppxjf68gdmg4w67nt38nwrqlxvw4q",
-            "hexed": "0xec95a6052074375bcad32dbe3ffde21c75f904269274743768abb5e9ae279b86"
+            "address": "xion1z20dnugfl3dtm08fyplyhczpsphkw9k4urvwnfayg2kwqn6v7xlsa0acac",
+            "hexed": "0x129ed9f109fc5abdbce9207e4be041806f6716d5e0d8e9a7a442ace04f4cf1bf"
           },
           {
             "type": "hpl_hook_fee",
-            "address": "xion13gr05jzyss9k42zrpyrfhfrqvfrj7m9gslmt7ku5gtt03yrr4rss7h9ses",
-            "hexed": "0x8a06fa4844840b6aa84309069ba46062472f6ca887f6bf5b9442d6f89063a8e1"
+            "address": "xion1dugkwl22v8avml2y4z7yfjegfy2j63njrjt5vg7eg22wtmrd9huq76984k",
+            "hexed": "0x6f11677d4a61facdfd44a8bc44cb2849152d46721c974623d94294e5ec6d2df8"
           }
         ]
       }
@@ -93,8 +93,8 @@
         {
           "id": "uxion",
           "type": "hpl_warp_native",
-          "address": "xion1pqgjc6ec3xhaaepe20szzg0wvwhdu9w44zqc3cnd0s6ky2tajtfqhcn798",
-          "hexed": "0x08112c6b3889afdee43953e02121ee63aede15d5a88188e26d7c3562297d92d2"
+          "address": "xion13fkxad69zppyjrgkwdhanlcepx2z98h7s68qzg7274rxjykd53qq6rdj20",
+          "hexed": "0x8a6c6eb7451042490d16736fd9ff190994229efe868e0123caf5466912cda440"
         }
       ],
       "cw20": []
@@ -102,8 +102,8 @@
     "test": {
       "msg_receiver": {
         "type": "hpl_test_mock_msg_receiver",
-        "address": "xion1j5ffxnsmskyne2qggpuwup9t76h5q773ety6m3ys7nvsv06ndr5sgt3kah",
-        "hexed": "0x9512934e1b85893ca8084078ee04abf6af407bd1cac9adc490f4d9063f5368e9"
+        "address": "xion19gjym862d92k33vv2kn782x5resshxw65k262g8vtmadkvqm9nxq2jz7qp",
+        "hexed": "0x2a244d9f4a695568c58c55a7e3a8d41e610b99daa595a520ec5efadb301b2ccc"
       }
     }
   }

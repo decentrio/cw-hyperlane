@@ -154,3 +154,5 @@ Pending https://sepolia.etherscan.io/tx/0x259b6bb5e6da59a79bbfce0e2ba3775a8a858b
 
   INFO] [contract] executed hpl_warp_native's router
 B77B8CB63617877AEEC643C44AB8D29D773839095BC485D3FD61E23C16CED6E5
+
+Could not fetch all metadata, ISM metadata count did not reach aggregation threshold, err_isms: [(0x000000000000000000000000a5273d02a45ffd1fbf6bd9e7a08402662ae67ae3, None)]d
