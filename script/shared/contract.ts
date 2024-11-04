@@ -21,7 +21,10 @@ export async function deployContract<T extends ContractNames>(
   logger.debug(`deploying ${contractName}`);
 
   try {
+    console.log("ctx: %j", ctx.artifacts);
     const codeId = ctx.artifacts[contractName];
+    console.log("codeId: ", codeId)
+    console.log("initMsg: ", initMsg)
     const res = await wasm.instantiate(
       signer,
       codeId,
@@ -29,6 +32,7 @@ export async function deployContract<T extends ContractNames>(
       `cw-hpl: ${contractName}`,
       'auto',
     );
+    console.log("res: " + res);
     const receipt = await waitTx(res.transactionHash, stargate);
     if (receipt.code > 0) {
       logger.error(

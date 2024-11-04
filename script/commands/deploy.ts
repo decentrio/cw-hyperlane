@@ -77,6 +77,7 @@ const deployCore = async (
   const preload = ctx.deployments.core;
   const deployment = preload || {};
 
+  console.log('1111');
   if (preload?.mailbox) {
     log(`${preload.mailbox.type} already deployed`);
     deployment.mailbox = preload.mailbox;
@@ -87,6 +88,8 @@ const deployCore = async (
       owner: client.signer,
     });
   }
+
+  console.log('2222');
 
   deployment.validator_announce =
     preload?.validator_announce ||
