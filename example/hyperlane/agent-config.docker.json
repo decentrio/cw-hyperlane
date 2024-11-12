@@ -27,9 +27,6 @@
       "protocol": "ethereum",
       "rpcUrls": [
         {
-          "http": "https://rpc-sepholia.decentrio.ventures"
-        },
-        {
           "http": "https://eth-sepolia.g.alchemy.com/v2/jWmA0ERPc0JdyMrZSEiM5lOBpEu2hD2l"
         }
       ],
@@ -63,7 +60,7 @@
       "protocol": "cosmos",
       "rpcUrls": [
         {
-          "http": "https://xion-testnet-rpc.polkachu.com"
+          "http": "https://xion-testnet.rpc.decentrio.ventures"
         }
       ],
       "grpcUrl": "https://xion-testnet.grpc.decentrio.ventures",
@@ -75,17 +72,17 @@
       },
       "contractAddressBytes": 32,
       "index": {
-        "from": 9188496,
+        "from": 10783515,
         "chunk": 10000
       },
       "blocks": {
         "confirmations": 0,
         "reorgPeriod": 0
       },
-      "mailbox": "0x013f528b01cd9edd45a9f3334bde99e932eea0cb269041f40905f329f401257a",
-      "validatorAnnounce": "0xd43af0574a6a202cbc0cf7a1f5b0f74a8d73f3408c6b648d09f8fd78de4b09ec",
-      "interchainGasPaymaster": "0x6425f1171c9526c79de3f48bfd33cfcb4b4af341ba82d880496c8643022f1e14",
-      "merkleTreeHook": "0xc31a1305df4208be6da5236cc0785123c21f51dd93db4d7f86895bb02f036f06"
+      "mailbox": "0xe1c63f18d5e6067f65157c4c58ba1aafd5fe1294c9d7d5da0478b273ee66456a",
+      "validatorAnnounce": "0xbecef72d2fb815a14adf5053f17182017dac9c91b3b0280cab3618eb16997ab9",
+      "interchainGasPaymaster": "0xe98cb1ff2530c84ef8823a694eb8cc5d91672342b5cdcaa6774f13772b992837",
+      "merkleTreeHook": "0x9752e7a27818ae98650b4fb9679a407c456a16de2da3ba1bb83af05cd2d97536"
     }
   }
 }

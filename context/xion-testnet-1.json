@@ -1,35 +1,110 @@
 {
-  "version": "v0.0.6-rc8",
   "artifacts": {
-    "hpl_mailbox": 931,
-    "hpl_validator_announce": 932,
-    "hpl_ism_aggregate": 933,
-    "hpl_ism_multisig": 934,
-    "hpl_ism_pausable": 935,
-    "hpl_ism_routing": 936,
-    "hpl_igp": 937,
-    "hpl_hook_aggregate": 938,
-    "hpl_hook_fee": 939,
-    "hpl_hook_merkle": 940,
-    "hpl_hook_pausable": 941,
-    "hpl_hook_routing": 942,
-    "hpl_hook_routing_custom": 943,
-    "hpl_hook_routing_fallback": 944,
-    "hpl_test_mock_hook": 945,
-    "hpl_test_mock_ism": 946,
-    "hpl_test_mock_msg_receiver": 947,
-    "hpl_igp_oracle": 948,
-    "hpl_warp_cw20": 949,
-    "hpl_warp_native": 950
+    "hpl_mailbox": 1330,
+    "hpl_validator_announce": 1331,
+    "hpl_ism_aggregate": 1332,
+    "hpl_ism_multisig": 1333,
+    "hpl_ism_pausable": 1334,
+    "hpl_ism_routing": 1335,
+    "hpl_igp": 1336,
+    "hpl_hook_aggregate": 1337,
+    "hpl_hook_fee": 1338,
+    "hpl_hook_merkle": 1339,
+    "hpl_hook_pausable": 1340,
+    "hpl_hook_routing": 1341,
+    "hpl_hook_routing_custom": 1342,
+    "hpl_hook_routing_fallback": 1343,
+    "hpl_test_mock_hook": 1344,
+    "hpl_test_mock_ism": 1345,
+    "hpl_test_mock_msg_receiver": 1346,
+    "hpl_igp_oracle": 1347,
+    "hpl_warp_cw20": 1348,
+    "hpl_warp_native": 1349
   },
   "deployments": {
-    "core": {},
-    "isms": {},
-    "hooks": {},
+    "core": {
+      "mailbox": {
+        "type": "hpl_mailbox",
+        "address": "xion1u8rr7xx4ucr87eg403x93ws64l2luy55e8tatksy0ze88mnxg44q7lzyfp",
+        "hexed": "0xe1c63f18d5e6067f65157c4c58ba1aafd5fe1294c9d7d5da0478b273ee66456a"
+      },
+      "validator_announce": {
+        "type": "hpl_validator_announce",
+        "address": "xion1hm80wtf0hq26zjkl2pflzuvzq976e8y3kwczsr9txcvwk95e02ush6e6s5",
+        "hexed": "0xbecef72d2fb815a14adf5053f17182017dac9c91b3b0280cab3618eb16997ab9"
+      }
+    },
+    "isms": {
+      "type": "hpl_ism_routing",
+      "address": "xion1qwuwtd5yggu4p2uqyqew6y2h44hafzhemkgrr4crrdpffvzkc7ds9p3xff",
+      "hexed": "0x03b8e5b684423950ab802032ed1157ad6fd48af9dd9031d7031b4294b056c79b",
+      "isms": {
+        "domain": 0,
+        "route": {
+          "type": "hpl_ism_multisig",
+          "address": "xion1vh4vtxt8l8fhz2uc2jmpnx3n6m56uu58m4405ghakqe930ktmq5s4jcn8y",
+          "hexed": "0x65eac59967f9d3712b9854b6199a33d6e9ae7287dd6afa22fdb03258becbd829"
+        }
+      }
+    },
+    "hooks": {
+      "default": {
+        "type": "hpl_hook_aggregate",
+        "address": "xion19cy8rxalws0a0x6jg9uvzz02d6kd0zfld0gg46yzxxjuf9kf4zgsdrzczc",
+        "hexed": "0x2e08719bbf741fd79b524178c109ea6eacd7893f6bd08ae88231a5c496c9a891",
+        "hooks": [
+          {
+            "type": "hpl_hook_merkle",
+            "address": "xion1jafw0gncrzhfsegtf7uk0xjq03zk59k79k3m5xac8tc9e5kew5mqudmk7n",
+            "hexed": "0x9752e7a27818ae98650b4fb9679a407c456a16de2da3ba1bb83af05cd2d97536"
+          },
+          {
+            "type": "hpl_igp",
+            "address": "xion1axxtrle9xryya7yz8f55awxvtkgkwg6zkhxu4fnhfufhw2ue9qmsafy9tv",
+            "hexed": "0xe98cb1ff2530c84ef8823a694eb8cc5d91672342b5cdcaa6774f13772b992837",
+            "oracle": {
+              "type": "hpl_igp_oracle",
+              "address": "xion1ln4vkqywlmym3xtfwghckw77ad60uq6j5m7pwj5y3vq8s6snv9zsgeldqj",
+              "hexed": "0xfceacb008efec9b89969722f8b3bdeeb74fe0352a6fc174a848b00786a136145"
+            }
+          }
+        ]
+      },
+      "required": {
+        "type": "hpl_hook_aggregate",
+        "address": "xion126hcwpjduagf5nfplk6578eahu03jc9tu33s5ccaplvvxuhlmg4qsqrarj",
+        "hexed": "0x56af87064de7509a4d21fdb54f1f3dbf1f1960abe4630a631d0fd8c372ffda2a",
+        "hooks": [
+          {
+            "type": "hpl_hook_pausable",
+            "address": "xion1tpxr2gtyaphxpqhszxhtrmjzycyztqgayfct49j932q9vt7ld45sc38ksg",
+            "hexed": "0x584c352164e86e6082f011aeb1ee42260825811d2270ba96458a80562fdf6d69"
+          },
+          {
+            "type": "hpl_hook_fee",
+            "address": "xion19smfg77krsv0aqml3dhjazvzn3latd2c3kyweed3rl6sjh90unys6pdafn",
+            "hexed": "0x2c36947bd61c18fe837f8b6f2e89829c7fd5b5588d88ece5b11ff5095cafe4c9"
+          }
+        ]
+      }
+    },
     "warp": {
-      "native": [],
+      "native": [
+        {
+          "id": "uxion",
+          "type": "hpl_warp_native",
+          "address": "xion14j9gsrupgja0nvu8d3vup42qjxm5jwx9hf337nymzjtd4fvzyl5qxfs74l",
+          "hexed": "0xac8a880f8144baf9b3876c59c0d54091b74938c5ba631f4c9b1496daa58227e8"
+        }
+      ],
       "cw20": []
     },
-    "test": {}
+    "test": {
+      "msg_receiver": {
+        "type": "hpl_test_mock_msg_receiver",
+        "address": "xion18jyr0vtrl24f4sjclkvtr6mdrrznusy49yshsgz66erptadythgsqqdksm",
+        "hexed": "0x3c8837b163faaa9ac258fd98b1eb6d18c53e4095292178205ad64615f5a45dd1"
+      }
+    }
   }
 }

@@ -160,12 +160,14 @@ export const getNetwork = (networkId: string): Config['networks'][number] => {
 
 export const config = yaml.load(readFileSync(path, 'utf-8')) as Config;
 
-export const getEvmNetwork = (networkName: string): Config['evm_networks'][number] => {
+export const getEvmNetwork = (
+  networkName: string,
+): Config['evm_networks'][number] => {
   const ret = config.evm_networks.find((v) => v.name === networkName);
   if (!ret)
     throw new Error(`EVM Network ${networkName} not found in the config file`);
   return ret;
-}
+};
 
 export async function getSigningClient(
   networkId: string,
